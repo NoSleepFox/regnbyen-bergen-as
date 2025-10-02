@@ -256,23 +256,6 @@ footer nav a {
   padding: 0 2rem;
 }
 
-.omprojekt-topp-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  border: 2px;
-  border-radius: 6px;
-  background-color: #708993;
-  margin: 1rem auto;
-  padding: 0 2rem;
-  margin-bottom: 50px;
-}
-
-.omprojekt-topp-box h1 {
-  color: white;
-}
-
 .omprojekt-box {
   display: list-item;
   color: white;
@@ -280,14 +263,34 @@ footer nav a {
   align-items: left;
   border: 2px;
   border-radius: 6px;
-  background-color: #708993;
+  background-color: transparent;
   padding: 0.5rem;
-  margin-top: 5px;
+  margin-top: 4.5rem;
+  position: relative;
+}
+
+.omprojekt-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 6px;
+  background: #708993;
+  opacity: 0.7;
+  z-index: 0;
 }
 
 .omprojekt-box p {
   padding-top: 1rem;
   font-size: larger;
+  position: relative;
+}
+
+.omprojekt-box h1 {
+  color: white;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+  text-align: center;
 }
 
 .omprojekt-body {
